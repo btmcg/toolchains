@@ -11,7 +11,7 @@ if [ -d "${prefix}" ]; then
 fi
 
 git clone --recursive --branch=releases/gcc-11.2.0 --depth=1 https://github.com/gcc-mirror/gcc.git
-wget https://ftp.gnu.org/gnu/binutils/binutils-2.36.tar.gz
+curl --remote-name https://ftp.gnu.org/gnu/binutils/binutils-2.36.tar.gz
 tar xf binutils-2.36.tar.gz
 
 pushd gcc
