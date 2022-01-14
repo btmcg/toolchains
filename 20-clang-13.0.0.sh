@@ -10,7 +10,7 @@ if [ -d "${prefix}" ]; then
     exit 0
 fi
 
-# git clone --recursive --branch=llvmorg-13.0.0 --depth=1 https://github.com/llvm/llvm-project.git
+git clone --recursive --branch=llvmorg-13.0.0 --depth=1 https://github.com/llvm/llvm-project.git
 pushd llvm-project
 cmake -S llvm -B build -G "Unix Makefiles"                                                              \
     -DCMAKE_BUILD_TYPE=Release                                                                          \
