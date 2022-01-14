@@ -25,7 +25,7 @@ cmake -S llvm -B build -G "Unix Makefiles"                                      
     -DGCC_INSTALL_PREFIX=/opt/custom/gcc/11.2.0                                                         \
     -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;compiler-rt;libcxxabi;libcxx;libunwind;lld;lldb"    \
     -DLLVM_TARGETS_TO_BUILD=X86
-cmake --build build
+cmake --build build -j20
 sudo cmake --install build
 popd
 rm -rf llvm-project
