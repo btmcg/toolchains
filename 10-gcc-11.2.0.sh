@@ -24,6 +24,7 @@ cd objdir
 ../configure            \
     --disable-multilib  \
     --enable-bootstrap  \
+    --enable-gold=yes   \
     --prefix="${prefix}"
 make -j20
 sudo make install
