@@ -24,6 +24,9 @@ cmake -S llvm -B build -G "Ninja"                                               
     -DCMAKE_SHARED_LINKER_FLAGS=-L/opt/custom/gcc/11.2.0/lib64                                          \
     -DCMAKE_VERBOSE_MAKEFILE=ON                                                                         \
     -DGCC_INSTALL_PREFIX=/opt/custom/gcc/11.2.0                                                         \
+    -DLIBCXXABI_USE_COMPILER_RT=YES                                                                     \
+    -DLIBCXXABI_USE_LLVM_UNWINDER=YES                                                                   \
+    -DLIBCXX_USE_COMPILER_RT=YES                                                                        \
     -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;compiler-rt;libcxxabi;libcxx;libunwind;lld;lldb"    \
     -DLLVM_TARGETS_TO_BUILD=X86
 cmake --build build -j20
